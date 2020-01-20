@@ -14,12 +14,16 @@
 Route::get('/', function () {
     return view('frontend/index');
 });
+Route::group(['middleware' => 'auth'], function(){
+  Route::get('/admin', function () {
+      return view('admin/layouts/dashboard');
+  });
 
-
-Route::get('/admin', function () {
-    return view('admin/layouts/dashboard');
+  Route::get('/admin/berita', function () {
+      return view('admin/layouts/berita');
+  });
 });
 
-Route::get('/admin/berita', function () {
-    return view('admin/layouts/berita');
-});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin/layouts/dashboard');
 });
+
+Route::get('/admin/berita', function () {
+    return view('admin/layouts/berita');
+});

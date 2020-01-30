@@ -33,15 +33,43 @@
         </li>
 
         <li class="nav-item has-treeview">
-          <a href="/admin/berita" class="nav-link">
+          <a href="/admin/category" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>
-              Berita
-              <span class="right badge badge-danger">New</span>
+              Kategori
             </p>
           </a>
         </li>
 
+        <li class="nav-item has-treeview">
+          <a href="/admin/article" class="nav-link">
+            <i class="nav-icon fas fa-newspaper"></i>
+            <p>
+              Artikel
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="/admin/comment" class="nav-link">
+            <i class="nav-icon fas fa-comment"></i>
+            <p>
+              Komentar
+              <span class="right badge badge-success">New</span>
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="/admin/advertisement" class="nav-link">
+            <i class="nav-icon fas fa-ad"></i>
+            <p>
+              Iklan
+            </p>
+          </a>
+        </li>
+
+<!--
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
@@ -60,13 +88,22 @@
             </li>
           </ul>
         </li>
-
-        <li class="nav-header">EXAMPLES</li>
+-->
+        <li class="nav-header">OTHER</li>
         <li class="nav-item">
           <a href="pages/gallery.html" class="nav-link">
-            <i class="nav-icon far fa-image"></i>
+            <i class="nav-icon far fa-id-card"></i>
             <p>
-              Gallery
+              Users
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="pages/gallery.html" class="nav-link">
+            <i class="nav-icon far fa-user"></i>
+            <p>
+              Profil
             </p>
           </a>
         </li>

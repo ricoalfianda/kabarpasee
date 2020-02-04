@@ -18,9 +18,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function(){
   //Masuk ke halaman dashboard Admin
-  Route::get('/admin', function () {
-      return view('admin/layouts/dashboard');
-  });
+  Route::get('/admin', 'AdminController@index');
+
   //KATEGORI
   Route::get('/admin/category', 'CategoryController@index');
   Route::get('/admin/category/add_category', 'CategoryController@create');

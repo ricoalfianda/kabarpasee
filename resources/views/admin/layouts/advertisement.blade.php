@@ -7,12 +7,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Komentar</h1>
+          <h1 class="m-0 text-dark">Iklan</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Comment</li>
+            <li class="breadcrumb-item active">Advertisement</li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -24,11 +24,11 @@
 
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Data Komentar</h3>
+        <h3 class="card-title">Data Iklan</h3>
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-        <a href="/admin/add_article" class="btn btn-success">Tambah</a>
+        <a href="/admin/advertisement/add_advertisement" class="btn btn-success">Tambah</a>
         <div>
           <br>
         </div>

@@ -9,9 +9,9 @@ class AdvertisementController extends Controller
     public function index(){
       return view('admin/layouts/advertisement');
     }
-    
-    public function create(){
 
+    public function create(){
+      return view('admin/layouts/add_advertisement');
     }
 
     public function store(){

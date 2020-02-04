@@ -7,12 +7,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Tambah Kategori</h1>
+          <h1>Tambah Artikel</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active">Category</li>
+            <li class="breadcrumb-item active">Article</li>
           </ol>
         </div>
       </div>
@@ -23,21 +23,21 @@
   <section class="content">
     <div class="row">
       <div class="col-12">
-        <div class="card card-primary">
+        <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Masukkan Kategori</h3>
+            <h3 class="card-title">Masukkan Artikel</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
             <form  action="{{ url('/category/create') }}" method="post">
               {{ csrf_field() }}
-              <label for="exampleInputEmail1">Nama Kategori</label>
-              <input type="text" class="form-control" name="kategori" placeholder="Nama Kategori" value="">
+              <label for="">Judul</label>
+              <input type="text" class="form-control" name="title" placeholder="Judul" value="">
               <br>
-              <label for="exampleInputEmail1">Deskripsi</label>
-              <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" value="">
+              <label for="">Deskripsi</label>
+                <textarea class="textarea" placeholder="Masukkan deskripsi"></textarea>
               <br>
-              <a class="btn btn-danger" href="/admin/category">Back</a>
+              <a class="btn btn-danger" href="/admin/article">Back</a>
               <input type="submit" class="btn btn-success" name="" value="Submit">
             </form>
           </div>

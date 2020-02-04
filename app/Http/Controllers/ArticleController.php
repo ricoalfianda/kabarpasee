@@ -11,7 +11,7 @@ class ArticleController extends Controller
     }
 
     public function create(){
-    
+      return view('admin/layouts/add_article');
     }
 
     public function store(){

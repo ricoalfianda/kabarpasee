@@ -28,7 +28,7 @@
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-        <a href="/admin/add_category" class="btn btn-success">Tambah</a>
+        <a href="/admin/category/add_category" class="btn btn-success">Tambah</a>
         <div>
           <br>
         </div>

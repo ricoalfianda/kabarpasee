@@ -21,22 +21,37 @@ Route::group(['middleware' => 'auth'], function(){
   Route::get('/admin', function () {
       return view('admin/layouts/dashboard');
   });
-  //Masuk ke halaman kategori Admin
-  Route::get('/admin/category', function () {
-      return view('admin/layouts/category');
-  });
-  //Masuk ke halaman artikel Admin
-  Route::get('/admin/article', function () {
-      return view('admin/layouts/article');
-  });
-  //Masuk ke halaman komentar Admin
-  Route::get('/admin/comment', function () {
-      return view('admin/layouts/comment');
-  });
-  //Masuk ke halaman iklan Admin
-  Route::get('/admin/advertisement', function () {
-      return view('admin/layouts/advertisement');
-  });
+  //KATEGORI
+  Route::get('/admin/category', 'CategoryController@index');
+  Route::get('/admin/category/add_category', 'CategoryController@create');
+  Route::post('/admin/category/add_category', 'CategoryController@store');
+  Route::get('/admin/category/{id}/edit_category', 'CategoryController@edit');
+  Route::put('/admin/category/{id}/edit_category', 'CategoryController@update');
+  Route::delete('/admin/category/{id}/delete_category', 'CategoryController@delete');
+  Route::get('/admin/category/{id}/show_category', 'CategoryController@show');
+
+  //ARTIKEL
+  Route::get('/admin/article', 'ArticleController@index');
+  Route::get('/admin/article/add_article', 'ArticleController@create');
+  Route::post('/admin/article/add_article', 'ArticleController@store');
+  Route::get('/admin/article/{id}/edit_article', 'ArticleController@edit');
+  Route::put('/admin/article/{id}/edit_article', 'ArticleController@update');
+  Route::delete('/admin/article/{id}/delete_article', 'ArticleController@delete');
+  Route::get('/admin/article/{id}/show_article', 'ArticleController@show');
+
+  //KOMENTAR
+  Route::get('/admin/comment', 'CommentController@index');
+  Route::delete('/admin/comment/{id}/delete_comment', 'CommentController@delete');
+  Route::get('/admin/comment/{id}/show_comment', 'CommentController@show');
+
+  //IKLAN
+  Route::get('/admin/advertisement', 'AdvertisementController@index');
+  Route::get('/admin/advertisement/add_advertisement', 'AdvertisementController@create');
+  Route::post('/admin/advertisement/add_advertisement', 'AdvertisementController@store');
+  Route::get('/admin/advertisement/{id}/edit_advertisement', 'AdvertisementController@edit');
+  Route::put('/admin/advertisement/{id}/edit_advertisement', 'AdvertisementController@update');
+  Route::delete('/admin/advertisement/{id}/delete_advertisement', 'AdvertisementController@delete');
+  Route::get('/admin/advertisement/{id}/show_advertisement', 'AdvertisementController@show');
 });
 
 //Autentikasi

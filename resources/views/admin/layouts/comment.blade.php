@@ -53,11 +53,11 @@
             <td>
               <center>
               <a href="#" class="btn btn-success">Lihat</a>
-              <a href="#" class="btn btn-primary">Edit</a>
               <a href="#" class="btn btn-danger">Hapus</a>
             </center>
             </td>
           </tr>
+
           </tbody>
         </table>
       </div>

@@ -29,16 +29,17 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form  action="{{ url('/category/create') }}" method="post">
+            <form  action="{{ url('/admin/category/add_category') }}" method="post">
               {{ csrf_field() }}
               <label for="exampleInputEmail1">Nama Kategori</label>
-              <input type="text" class="form-control" name="kategori" placeholder="Nama Kategori" value="">
-              <br>
+              <input type="text" class="form-control" name="category" placeholder="Nama Kategori" value="">
+              <!--<br>
               <label for="exampleInputEmail1">Deskripsi</label>
               <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" value="">
+              -->
               <br>
               <a class="btn btn-danger" href="/admin/category">Back</a>
-              <input type="submit" class="btn btn-success" name="" value="Submit">
+              <input type="submit" class="btn btn-success" value="Submit">
             </form>
           </div>
 

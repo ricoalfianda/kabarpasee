@@ -34,6 +34,17 @@
               <label for="">Judul</label>
               <input type="text" class="form-control" name="title" placeholder="Judul" value="">
               <br>
+
+              <div class="form-group">
+                <label>Kategori</label>
+                <select class="form-control">
+                  <option>Religi</option>
+                  <option>Ekonomi</option>
+                  <option>Politik</option>
+                </select>
+              </div>
+
+              <br>
               <label for="">Deskripsi</label>
                 <textarea class="textarea" placeholder="Masukkan deskripsi"></textarea>
               <br>

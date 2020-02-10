@@ -7,7 +7,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Kategori</h1>
+          <h1 class="m-0 text-dark">{{$title}}</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -28,7 +28,7 @@
       </div>
       <!-- /.card-header -->
       <div class="card-body">
-        <a href="/admin/category/add_category" class="btn btn-success">Tambah</a>
+        <a href="{{url('/admin/category/add_category')}}" class="btn btn-success">Tambah</a>
         <div>
           <br>
         </div>
@@ -38,18 +38,17 @@
           <tr>
             <th><center>No</th>
             <th><center>Kategori</th>
-            <th><center>Deskripsi</th>
             <th><center>Created at</th>
             <th><center>Aksi</th>
           </tr>
 
           </thead>
           <tbody>
+        @foreach ($categories as $index => $kt)
           <tr>
-            <td><center>1</td>
-            <td><center>Terupdate</td>
-            <td><center>Berita terhangat dalam 3 hari ini</td>
-            <td><center>29-Jan-20</td>
+            <td><center>{{$index+1}}</td>
+            <td><center>{{$kt->category}}</td>
+            <td><center>{{$kt->created_at}}</td>
             <td>
               <center>
               <a href="#" class="btn btn-primary">Edit</a>
@@ -57,6 +56,8 @@
             </center>
             </td>
           </tr>
+        @endforeach
+
           </tbody>
         </table>
       </div>

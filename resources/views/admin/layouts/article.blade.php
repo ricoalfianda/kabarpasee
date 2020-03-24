@@ -37,27 +37,36 @@
 
           <tr>
             <th><center>No</th>
+            <th><center>Gambar</th>
             <th><center>Judul</th>
             <th><center>Kategori</th>
+            <th><center>Penulis</th>
             <th><center>Created at</th>
             <th><center>Aksi</th>
           </tr>
 
           </thead>
           <tbody>
+        @foreach($articles as $index => $ar)
           <tr>
-            <td><center>1</td>
-            <td><center>Virus Corona Menyusup Ke Aceh</td>
-            <td><center>Terupdate</td>
-            <td><center>29-Jan-20</td>
+            <td><center>{{$index+1}}</td>
+            <td><center><img src="{{asset('article/'.$ar->picture)}}"width='50' height='50'></td>
+            <td><center>{{$ar->title}}</td>
+            <td><center>{{$ar->category}}</td>
+            <td><center>{{$ar->name}}</td>
+            <td><center>{{$ar->created_at}}</td>
             <td>
               <center>
-              <a href="#" class="btn btn-success">Lihat</a>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Hapus</a>
+              <a href="{{url('/admin/article/'.$ar->id.'/edit_article')}}" class="btn btn-primary">Edit</a>
+              <form class="" action="{{url('/admin/article/'.$ar->id.'/delete_article')}}" method="post" style="display:inline">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <input type="submit" class="btn btn-danger" name="" value="Delete">
+              </form>
             </center>
             </td>
           </tr>
+        @endforeach
           </tbody>
         </table>
       </div>

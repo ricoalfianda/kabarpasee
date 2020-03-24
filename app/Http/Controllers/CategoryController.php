@@ -30,19 +30,28 @@ class CategoryController extends Controller
         'updated_at'=>date('Y-m-d H:i:s')
       ]);
 
-      return redirect('admin/category');
+      return redirect('/admin/category');
     }
 
-    public function edit(){
+    public function edit($id){
+      $categories=\DB::table('categories')->where('id',$id)->first();
 
+      return view('admin/layouts/edit_category', compact('categories'));
     }
 
-    public function update(){
+    public function update(Request $request, $id){
+      \DB::table('categories')->where('id',$id)->update([
+        'category'=>$request->category,
+        'updated_at'=>date('Y-m-d H:i:s')
+      ]);
 
+      return redirect('/admin/category');
     }
 
-    public function delete(){
+    public function delete($id){
+      \DB::table('categories')->where('id',$id)->delete();
 
+      return redirect('/admin/category');
     }
 
     public function show(){

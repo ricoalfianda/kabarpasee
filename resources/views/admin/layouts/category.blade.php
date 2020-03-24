@@ -51,8 +51,12 @@
             <td><center>{{$kt->created_at}}</td>
             <td>
               <center>
-              <a href="#" class="btn btn-primary">Edit</a>
-              <a href="#" class="btn btn-danger">Hapus</a>
+              <a href="{{url('/admin/category/'.$kt->id.'/edit_category')}}" class="btn btn-primary">Edit</a>
+              <form class="" action="{{url('/admin/category/'.$kt->id.'/delete_category')}}" method="post" style="display:inline">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
+                <input type="submit" class="btn btn-danger" name="" value="Delete">
+              </form>
             </center>
             </td>
           </tr>

@@ -7,12 +7,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Tambah Iklan</h1>
+          <h1>Edit Kategori</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active">Advertisement</li>
+            <li class="breadcrumb-item active">Category</li>
           </ol>
         </div>
       </div>
@@ -23,22 +23,24 @@
   <section class="content">
     <div class="row">
       <div class="col-12">
-        <div class="card">
+        <div class="card card-primary">
           <div class="card-header">
-            <h3 class="card-title">Masukkan Iklan</h3>
+            <h3 class="card-title">Edit Kategori</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form  action="{{ url('/admin/article/add_advertisement') }}" method="post">
+            <form  action="{{ url('/admin/category/'.$categories->id.'/edit_category') }}" method="post">
               {{ csrf_field() }}
-              <label for="">Judul</label>
-              <input type="text" class="form-control" name="title" placeholder="Judul" value="">
+              {{ method_field('put') }}
+              <label for="exampleInputEmail1">Nama Kategori</label>
+              <input type="text" class="form-control" name="category" placeholder="Nama Kategori" value="{{$categories->category}}">
+              <!--<br>
+              <label for="exampleInputEmail1">Deskripsi</label>
+              <input type="text" class="form-control" name="deskripsi" placeholder="Deskripsi" value="">
+              -->
               <br>
-              <label for="">Deskripsi</label>
-                <textarea class="textarea" placeholder="Masukkan deskripsi"></textarea>
-              <br>
-              <a class="btn btn-danger" href="/admin/advertisement">Back</a>
-              <input type="submit" class="btn btn-success" name="" value="Submit">
+              <a class="btn btn-danger" href="/admin/category">Back</a>
+              <input type="submit" class="btn btn-success" value="Update">
             </form>
           </div>
 
